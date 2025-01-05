@@ -18,7 +18,7 @@ int main(int argc, char * argv[])
 				<< argv[0] << " <filename.cfg> <filename.names> <filename.weights>" << std::endl;
 			throw std::invalid_argument("wrong number of arguments");
 		}
-
+		cv::namedWindow("video", cv::WINDOW_NORMAL);
 		// Load the neural network.  The order of the 3 files does not matter, DarkHelp should figure out which file is which.
 		DarkHelp::NN nn(argv[1], argv[2], argv[3]);
 
